@@ -1,0 +1,54 @@
+h1{
+    font-size: 30px;
+    color: white;
+    font-family: 'B612', sans-serif;
+
+}
+
+body{
+    background: black;
+}
+
+#headerContainer{
+    width: 253px;
+    height: 200px;
+    margin: auto;
+    padding:20px;
+}
+
+#headerImage{
+    height: 200px;
+    margin: auto;
+}
+
+#mainContent{
+    width: 48%;
+    height: 80vh;
+    margin: auto;
+    border: 2px dotted white;
+    overflow: hidden;
+    text-align: center;
+}
+
+#mainImage{
+    width: 48%;
+    height: 100%;
+    float: left;
+    border-right: 2px dotted white;
+    padding-right: 1%
+}
+
+#textContent{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.textElements{
+    margin-top: 10%;
+}
+
+#guessText{
+    
+}
+

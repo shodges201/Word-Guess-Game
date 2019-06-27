@@ -22,33 +22,40 @@ body{
 }
 
 #mainContent{
-    width: 48%;
-    height: 80vh;
+    width: 50%;
     margin: auto;
     border: 2px dotted white;
     overflow: hidden;
     text-align: center;
 }
 
-#mainImage{
-    width: 48%;
-    height: 100%;
+#imageContainer{
+    width: 49%;
     float: left;
-    border-right: 2px dotted white;
-    padding-right: 1%
 }
 
-#textContent{
-    width: 50%;
-    height: 100%;
+#textContainer{
+    width: 49%;
     float: left;
+    border-left: 2px dotted white;
+    padding-bottom: 5%;
+}
+
+#mainImage{
+    width: 90%;
+    margin: auto;
+    margin-top: 10%;
 }
 
 .textElements{
     margin-top: 10%;
 }
 
-#guessText{
-    
+@media only screen and (max-width: 768px){
+    h1{
+        font-size: 20px;
+    }
+    #mainContent{
+        width: 80%;
+    }
 }
-

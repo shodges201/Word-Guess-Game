@@ -1,8 +1,12 @@
+$(document).ready(function() {
+
 var guessText = document.getElementById("guessText");
 var guessesRemainingText = document.getElementById("guessesLeft");
 var alreadyGuessedText = document.getElementById("lettersGuessed");
 var winsText = document.getElementById("numWins");
+var leftImage = document.getElementById("mainImage");
 
+var imageList = ["assets/images/stockPhoto_stadium.jpg", "assets/images/stockPhoto_foulLine.jpg", "assets/images/stockPhoto_pitcher.jpg", "assets/images/stockPhoto_battersBox.jpg"]
 var wordList = ["baseball", "walk", "popcorn", "triple", "double", "single", "pitch", "outfield", "infield", "shortstop", "catcher"];
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var randNum = Math.floor(Math.random() * wordList.length);
@@ -13,6 +17,9 @@ var alreadyGuessed = [];
 var incorrectGuesses = [];
 var correctGuesses = 0;
 var winCount = 0;
+var randImgNum = Math.floor(Math.random() * imageList.length);
+var newImage = imageList[randImgNum];
+leftImage.setAttribute("src", newImage);
 
 for(var i = 0; i < currentWord.length; i++){
     wordDisplay = wordDisplay + "_ ";
@@ -74,7 +81,19 @@ function newGame(){
     for(var i = 0; i < currentWord.length; i++){
         wordDisplay = wordDisplay + "_ ";
     }
+    $("#mainImage").fadeOut("slow", setImage);
     updateUI();
 }
 
-
+function setImage(){
+    if(randImgNum != imageList.length-1){
+        randImgNum++;
+    }
+    else{
+        randImgNum = 0;
+    }
+    var newImage = imageList[randImgNum];
+    leftImage.setAttribute("src", newImage);
+    $("#mainImage").fadeIn("slow");
+}
+});
